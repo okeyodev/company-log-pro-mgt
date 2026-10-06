@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<title>AVENIR — Sign in</title>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+.login-shell{max-width:420px;margin:0 auto;padding:80px 32px;display:flex;flex-direction:column;gap:28px;min-height:100vh;justify-content:center}
+.login-shell .form-title{font-size:32px}
+.login-shell .btn-primary{flex:0 0 52px}
+.login-meta{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;color:var(--text-light-faint);margin-top:auto;padding-top:24px;border-top:1px solid var(--line-light)}
+</style>
+</head>
+<body>
+<div class="login-shell">
+  <div class="brand" style="color:var(--text-light);margin-bottom:8px">
+    <div class="brand-mark" style="border-color:var(--line-light-2);background:var(--bg-light-2)"><span class="mark-box" style="border-color:var(--accent-2)"></span><span class="mark-line" style="background:var(--accent-2)"></span></div>
+    <div class="brand-type"><strong style="font-family:var(--font-display);letter-spacing:0.12em;font-weight:400">AVENIR</strong><span>ASSET MANAGEMENT</span></div>
+  </div>
+  <div>
+    <h1 class="form-title">Welcome back</h1>
+    <p class="form-sub" style="margin-top:8px">Sign in to your portfolio workspace. Encrypted session.</p>
+  </div>
+  <form onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.classList.add('is-loading'); b.disabled=true; setTimeout(()=>location.href='index.html',900)" style="display:flex;flex-direction:column;gap:18px">
+    <div class="field" data-field="email">
+      <label for="email2">Work email</label>
+      <div class="input-wrap"><input id="email2" type="email" placeholder="alex@firm.com" required></div>
+    </div>
+    <div class="field" data-field="password2">
+      <label for="password2">Password</label>
+      <div class="input-wrap"><input id="password2" type="password" placeholder="••••••••••••" required></div>
+    </div>
+    <button class="btn-primary" type="submit"><span class="btn-label">Sign in</span><span class="btn-loader"><i></i><i></i><i></i></span><span class="btn-arrow">→</span></button>
+  </form>
+  <p class="login-link" style="text-align:left">No account? <a href="index.html">Create account</a></p>
+  <div class="login-meta">DEMO · NO BACKEND · THIS IS A FRONTEND PROTOTYPE FOR AVENIR ASSET MANAGEMENT</div>
+</div>
+</body>
+</html>
