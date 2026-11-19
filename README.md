@@ -1,37 +1,103 @@
-# AVENIR — Asset Investment Platform — Signup Experience
+# AVENIR — Asset Investment Platform
 
-Premium fintech signup built with **pure HTML, CSS, vanilla JavaScript** — no frameworks.
+A premium, responsive front-end prototype for an institutional real-estate investment platform. The application guides users through a polished four-stage account setup, investment preferences, location details, and final consent flow.
 
-## Product Direction
-- Deep navy / charcoal + warm white + brass accent
-- Institutional wealth management, not crypto
-- Left visual ecosystem: PROPERTY → ASSET → INVESTMENT → PORTFOLIO
-- Right: multi-stage onboarding
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Website-2f80ed?style=for-the-badge)](https://okeyodev.github.io/company-log-pro-mgt/)
 
-## Structure
-- `index.html` — main signup page
-- `styles.css` — advanced CSS3, grid, isometric, animations
-- `signup.js` — modular vanilla JS (validateStep, validateEmail, validatePassword, updatePasswordStrength, updateProgress, selectInterest, showError, clearError, goToNextStep, goToPreviousStep, handleSignup)
-- `login.html` — minimal sign-in placeholder
+## Preview
 
-## Flow
-1. Account (name, email, password with strength, confirm)
-2. Intent (Invest / Buy / Both / Explore) — selectable cards
-3. Interests (multi-select chips) + Country / City
-4. Review + Terms + CTA with loading / success state
+![Project preview](Screenshot.png)
 
-## Interactions
-- Progress rail synced to flow nodes
-- Password live strength + rule ticks
-- Card selection with elevation + check
-- Interest chips with dot indicator
-- Cursor parallax on isometric field (rAF, reduced-motion safe)
-- Inline validation, success states, simulated provisioning
+## About the Project
 
-## Run
-Open `index.html` in browser. No build step.
+AVENIR presents an asset-management experience built around property discovery and investment onboarding. It combines a high-end institutional visual design with an interactive signup workflow that demonstrates form validation, responsive states, password feedback, and client-side demo data storage.
 
-## Quality Bar
-Fast, trustworthy, premium, controlled. Semantic HTML, keyboard nav, focus states, 44px touch targets, prefers-reduced-motion support.
+The project is a frontend-only prototype. It does not connect to a real authentication, payment, banking, or portfolio-management API.
 
-© AVENIR Asset Management — Demo prototype
+## Features
+
+- Four-step account onboarding:
+  1. Account details and password-strength validation
+  2. Investment intent selection
+  3. Interests, country, and city selection
+  4. Review and consent confirmation
+- Live password-strength meter and validation rules
+- Inline form errors and success states
+- Accessible radio, checkbox, keyboard, and focus interactions
+- Password visibility controls
+- Google sign-in demo interaction
+- Simulated account provisioning and generated demo account ID
+- Demo sign-in page
+- Responsive desktop and mobile layout
+- Reduced-motion support
+- Cursor-based parallax effect on the visual panel
+- Local storage persistence for demonstration account data
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts
+- Inline SVG graphics
+
+No framework, package manager, build tool, or backend is required.
+
+## Project Structure
+
+```text
+.
+├── index.html      # Main four-step signup experience
+├── login.html      # Demo sign-in page
+├── styles.css      # Layout, components, animations, and responsive styles
+├── signup.js       # Validation, state, navigation, and interaction logic
+├── Screenshot.png  # Project preview image
+└── README.md       # Project documentation
+```
+
+## Getting Started
+
+### View locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/okeyodev/company-log-pro-mgt.git
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd company-log-pro-mgt
+   ```
+
+3. Open `index.html` directly in a browser, or run a local server:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+4. Visit `http://localhost:8000`.
+
+### Live website
+
+The deployed website is available at:
+
+**https://okeyodev.github.io/company-log-pro-mgt/**
+
+## Demo Data and Limitations
+
+- Account details are stored in the browser's `localStorage` under `avenir_demo`.
+- Registration and sign-in actions are simulated.
+- Google sign-in only demonstrates the UI flow.
+- Terms and Privacy links are placeholders.
+- No sensitive financial or authentication information should be entered.
+- The live project should not be used as a real financial or identity-verification system.
+
+## Accessibility and UX
+
+The interface includes semantic labels, visible focus states, ARIA error descriptions, keyboard-operable controls, reduced-motion handling, and touch-friendly targets.
+
+## Author
+
+Built by [OkeyoDev](https://github.com/okeyodev).
